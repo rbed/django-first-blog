@@ -1,0 +1,10 @@
+<ul>
+    {% for task in taski %}
+        <li><a href="{% url 'Customers:task-detail' task.id %}">{{ task.task_text }}</a></li>
+    {% endfor %}
+
+</ul>
+
+<a href="{% url 'Customers:task_new'%}">dodaj nowy task</a>
+</br>
+<a href="{% url 'Customers:customers-list' %}">Lista klientów</a>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>{{task}}</h1>
+
+
+<ul>{{ task.task_text }}</ul>
+<ul>{{ task.pub_date }}</ul>
+<ul>{{ task.status }}</ul>
+
+<a href="{% url 'Customers:task_edit' pk=task.pk %}">edytuj</a>
+</br>
+<a href="{% url 'Customers:task_new'%}">dodaj nowy task</a>
+
+</br>
+<a href="{% url 'Customers:customers-list' %}">Lista klientów</a>
+
+</body>
+</html>

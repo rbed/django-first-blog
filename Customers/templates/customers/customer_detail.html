@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+</head>
+<body>
+<h1>{{klient}}</h1>
+detale klientow
+{%for zadanie in zadania%}
+<table>
+    <tr>
+        <th><a href="{% url 'Customers:task-detail' zadanie.id%}">{{zadanie.task_text}}</a></th>
+        <th>{{zadanie.status}}</th>
+    </tr>
+</table>
+{%endfor%}
+
+<a href="{% url 'Customers:customer_edit' pk=klient.pk %}">edytuj</></a>
+</br>
+<a href="{% url 'Customers:customers-list' %}">Lista klientów</a>
+
+
+
+</body>
+</html>

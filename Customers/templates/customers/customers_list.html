@@ -1,0 +1,20 @@
+
+<a href="{% url 'Customers:task-list' %}">zobacz listę wszystkich tasków</a>
+</br>
+<h1>{{domain}}</h1>
+<table>
+    {% for customer in klienci %}
+        <tr>
+        <td><a href="{% url 'Customers:detail1' customer.id %}">{{ customer.domain }}</a></td>
+        <td>{{ customer.start_date }}</td>
+        <td>{{ customer.agreement }}</td>
+        <td><a href="{% url 'Customers:task-customer-list' customer.id %}">zadania</a></td>
+
+        <tr>
+    {% endfor %}
+
+</table>
+
+<a href="{% url 'Customers:customer_new'%}">dodaj nowego klienta</a>
+
+
