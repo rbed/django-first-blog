@@ -28,3 +28,6 @@ admin.site.register(Category, CategoryAdmin)
 admin.site.register(SubCategory, SubCategoryAdmin)
 admin.site.register(Article, ArticleAdmin)
 admin.site.register(Author, AuthorAdmin)
+
+
+#test gita
