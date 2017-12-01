@@ -9,7 +9,7 @@
     <body>
     {%for art in article%}
     <div>
-        <p>published: {{article.pub_date}}</p>
+        <p>published: {{art.pub_date}}</p>
         <h1>{{art.title}}</h1>
         <p>{{art.text | linebreaksbr}}</p>
     </div>
