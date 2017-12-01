@@ -25,7 +25,7 @@ SECRET_KEY = 'k)$2@d-=w#i&e+*=5jbr($pw6i9(gp#nq35gvso+me6&r@j5+i'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['radnar.pythonanywhere.com']
+ALLOWED_HOSTS = ['radnar.pythonanywhere.com', '127.0.0.1' ]
 
 
 # Application definition

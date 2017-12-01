@@ -1,0 +1,18 @@
+
+
+
+
+<html>
+    <head>
+        <title>Django Girls blog</title>
+    </head>
+    <body>
+    {%for art in article%}
+    <div>
+        <p>published: {{article.pub_date}}</p>
+        <h1>{{art.title}}</h1>
+        <p>{{art.text | linebreaksbr}}</p>
+    </div>
+    {% endfor %}
+    </body>
+</html>
