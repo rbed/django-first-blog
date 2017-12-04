@@ -4,22 +4,34 @@
 
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="{% static 'blog/css/blog.css' %}">
+        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
         <link rel="stylesheet" type="text/css" href="{% static 'blog/css/dupa.css' %}" />
         <!--<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">-->
 
+    <div class="page-header">
         <title>Django Girls blog</title>
+    </div>
     </head>
-    <body>
+<body>
     <h2>test h2</h2>
     <img src="/static/play.jpg" alt="play" />
-    {%for art in article%}
-    <div>
-        <p>published: {{art.pub_date}}</p>
-        <h1>{{art.title}}</h1>
-        <p>{{art.text | linebreaksbr}}</p>
+
+<div class="content-container">
+    <div class="row">
+        <div class="col-md-8">
+            {%for art in article%}
+                <div class="post">
+                    <div class="date">
+                        <p>published: {{art.pub_date}}</p>
+                    </div>
+                    <h1><a href="">{{art.title}}</a></h1>
+                    <p>{{art.text | linebreaksbr}}</p>
+                </div>
+            {% endfor %}
+        </div>
     </div>
-    {% endfor %}
-    </body>
+</div>
+
+</body>
 </html>
