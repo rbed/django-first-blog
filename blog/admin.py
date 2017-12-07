@@ -15,7 +15,7 @@ class SubCategoryAdmin(admin.ModelAdmin):
 
 class ArticleAdmin(admin.ModelAdmin):
     model = Article
-    list_display = ('meta_title', 'meta_desc', 'title', 'category', 'subcategory', 'create_date','pub_date', 'author')
+    list_display = ('meta_title', 'meta_desc', 'title', 'category', 'subcategory', 'create_date', 'pub_date', 'author')
     list_filter = ('category',)
 
 

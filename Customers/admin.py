@@ -16,7 +16,7 @@ class CustomerAdmin(admin.ModelAdmin):
 #        (None, {'fields': ['domain']}),
 #        ('Date information', {'fields': ['start_date'], 'classes': ['collapse']}),
 #    ]
-    #list_display odpowiada za wyświetlanie listy klientow oraz jej kolumn
+    #list_display odpowiada za wyswietlanie listy klientow oraz jej kolumn
     list_display = ('domain', 'start_date', 'agreement', 'end_date')
 
     #fields odpowiada za wyswietlenie pol wewnatrz danego egzamplarza klienta
