@@ -29,7 +29,7 @@ class TaskAdmin(admin.ModelAdmin):
     fields = ('for_whom', ('task_text', 'status'), ('pub_date', 'status_change_date', 'end_date'))
     list_filter = ['for_whom__domain']
 
-    #   zeby status okreslony w modelach był mozliwy do wywolania z panelu listy taskow w adminie, piszemy funkcje ktore go wywolaja
+    #   zeby status okreslony w modelach byl mozliwy do wywolania z panelu listy taskow w adminie, piszemy funkcje ktore go wywolaja
     # wiecej tu https://docs.djangoproject.com/pl/1.11/ref/contrib/admin/actions/
     def change_stat_uklienta(self, request, queryset):
         rows_updated = queryset.update(status='k')
