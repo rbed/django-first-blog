@@ -9,7 +9,7 @@ from .forms import ArtForm
 #widok art
 
 def article_list(request):
-    article = Article.objects.filter(pub_date__lte=timezone.now()).order_by('pub_date')
+    article = Article.objects.filter(pub_date__lte=timezone.now()).order_by('-pub_date')
     return render(request, 'blog/post_list.html', {'article': article})
 
 def article_detail(request, pk):
@@ -24,7 +24,7 @@ def article_new(request):
             art.author = request.user
             art.pub_date = timezone.now()
             art.save()
-            return redirect('art-detail', pk=art.pk)
+            return redirect('blog:art-detail', pk=art.pk)
     else:
         form = ArtForm()
     return render(request, 'blog/post_edit.html', {'form': form})

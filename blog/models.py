@@ -5,12 +5,11 @@ from django.utils import timezone
 # Create your models here.
 
 
-class Author(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
-    author = models.BooleanField(default=False)
-
-    def __str__(self):
-        return self.user.username
+#class Author(models.Model):
+#    user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
+#    author = models.BooleanField(default=False)
+#    def __str__(self):
+#        return self.user.username
 
 class Category(models.Model):
     name = models.CharField(max_length=100)
@@ -37,7 +36,7 @@ class Article(models.Model):
     subcategory = models.ForeignKey(SubCategory, on_delete=models.SET_NULL, null=True)
     create_date = models.DateField(default=timezone.now)
     pub_date = models.DateField(blank=True, null=True)
-    author = models.ForeignKey(Author, on_delete=models.SET_DEFAULT, default='admin')
+    author = models.ForeignKey(User, on_delete=models.SET_DEFAULT, default='admin')
 
 
     def publish(self):

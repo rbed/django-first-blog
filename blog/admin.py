@@ -1,5 +1,5 @@
 from django.contrib import admin
-from blog.models import Author, Category, SubCategory, Article
+from blog.models import Category, SubCategory, Article
 
 
 class CategoryAdmin(admin.ModelAdmin):
@@ -19,15 +19,15 @@ class ArticleAdmin(admin.ModelAdmin):
     list_filter = ('category',)
 
 
-class AuthorAdmin(admin.ModelAdmin):
-    model = Author
-    list_display = ['user', 'author']
+#class AuthorAdmin(admin.ModelAdmin):
+#    model = Author
+#    list_display = ['user', 'author']
 
 
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(SubCategory, SubCategoryAdmin)
 admin.site.register(Article, ArticleAdmin)
-admin.site.register(Author, AuthorAdmin)
+#admin.site.register(Author, AuthorAdmin)
 
 
 #test gita
