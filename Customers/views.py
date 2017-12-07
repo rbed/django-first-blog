@@ -1,6 +1,6 @@
-from django.shortcuts import render, render_to_response, HttpResponseRedirect, get_object_or_404
-from django.shortcuts import redirect
-from django.http import HttpResponse
+# from django.shortcuts import render, render_to_response, HttpResponseRedirect, get_object_or_404
+# from django.shortcuts import redirect
+# from django.http import HttpResponse
 from django.views.generic import TemplateView, ListView, DetailView
 from .models import Customer, Task
 from .forms import TaskForm, CustomerForm, CustomerFormNew
@@ -141,10 +141,10 @@ def dupa(request):
 
 
 
-# Czyli w naszym przypadku customer/customers_list.html. W szablonie tym list obiektów typu Customer będzie
-# dostępna w zmiennej object_list. Jeżeli "object_list" nam się nie podoba to można podać nazwę zrozumiałą
-# dla człowieka za pomocą atrybutu context_object_name. Możemy także ograniczyć zbiór obiektów listowanych
-# przez widok (domyślnie wszystkie) podając dla atrybutu queryset własne zapytanie-QuerySet dla modelu.
+# Czyli w naszym przypadku customer/customers_list.html. W szablonie tym list obiektow typu Customer bedzie
+# dostepna w zmiennej object_list. Jezeli "object_list" nam sie nie podoba to mozna podac nazwę zrozumiala
+# dla czlowieka za pomoca atrybutu context_object_name. Mozemy takze ograniczyc zbior obiektow listowanych
+# przez widok (domyslnie wszystkie) podajac dla atrybutu queryset wlasne zapytanie-QuerySet dla modelu.
 #http://www.python.rk.edu.pl/w/p/przeglad-nowych-generic-views-django-opartych-o-klasy/
 
 
