@@ -142,7 +142,7 @@ def dupa(request):
 
 
 # Czyli w naszym przypadku customer/customers_list.html. W szablonie tym list obiektow typu Customer bedzie
-# dostepna w zmiennej object_list. Jezeli "object_list" nam sie nie podoba to mozna podac nazwę zrozumiala
+# dostepna w zmiennej object_list. Jezeli "object_list" nam sie nie podoba to mozna podac nazwe zrozumiala
 # dla czlowieka za pomoca atrybutu context_object_name. Mozemy takze ograniczyc zbior obiektow listowanych
 # przez widok (domyslnie wszystkie) podajac dla atrybutu queryset wlasne zapytanie-QuerySet dla modelu.
 #http://www.python.rk.edu.pl/w/p/przeglad-nowych-generic-views-django-opartych-o-klasy/
