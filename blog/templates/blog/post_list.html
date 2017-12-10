@@ -8,7 +8,7 @@
             <p>author: {{art.author}}</p>
         </div>
         <h1><a href="{% url 'blog:art-detail' pk=art.pk %}">{{art.title}}</a></h1>
-        <p>{{art.text | linebreaksbr}}</p>
+        <p>{{art.text | linebreaksbr | truncatewords:50 }}</p>
     </div>
 {% endfor %}
 {% endblock %}
