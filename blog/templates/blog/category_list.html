@@ -1,7 +1,6 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
-
 {%for art in article%}
     <div class="post">
         <div class="date">
@@ -12,5 +11,4 @@
         <p>{{art.text | linebreaksbr | truncatewords:50 }}</p>
     </div>
 {% endfor %}
-
 {% endblock %}
