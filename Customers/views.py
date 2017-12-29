@@ -1,6 +1,6 @@
-# from django.shortcuts import render, render_to_response, HttpResponseRedirect, get_object_or_404
-# from django.shortcuts import redirect
-# from django.http import HttpResponse
+from django.shortcuts import render, render_to_response, HttpResponseRedirect, get_object_or_404
+from django.shortcuts import redirect
+from django.http import HttpResponse
 from django.views.generic import TemplateView, ListView, DetailView
 from .models import Customer, Task
 from .forms import TaskForm, CustomerForm, CustomerFormNew

@@ -37,9 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'widget_tweaks',
     'polls',
     'Customers',
     'blog',
+    'brazil',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -132,7 +135,8 @@ STATIC_URL = '/static/'
 
 
 STATICFILES_DIRS = (
-    #os.path.join(BASE_DIR, "Pool/blog/static"),
-    #"/blog/static/",
+    os.path.join(BASE_DIR, 'static'),
+#    "/blog/static/",
+#    "/brazil/static/",
 )
 
